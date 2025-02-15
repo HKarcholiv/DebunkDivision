@@ -38,18 +38,35 @@ document.getElementById("lookupBtn").addEventListener("click", async function ()
                 return;
             }
 
-            let mapUrl = `https://www.google.com/maps/search/?api=1&query=${geoResponse.latitude},${geoResponse.longitude}`;
+            // Safely access all fields (avoiding "undefined" errors)
+            let city = geoResponse.city || "Unknown";
+            let region = geoResponse.region || "Unknown";
+            let country = geoResponse.country || "Unknown";
+            let countryCode = geoResponse.country_code || "N/A";
+            let isp = geoResponse.connection?.isp || "Unknown";
+            let org = geoResponse.connection?.org || "Unknown";
+            let asn = geoResponse.connection?.asn || "Unknown";
+            let latitude = geoResponse.latitude || "N/A";
+            let longitude = geoResponse.longitude || "N/A";
+            let timezone = geoResponse.timezone?.id || "Unknown";
+            let timezoneUTC = geoResponse.timezone?.utc || "Unknown";
+            let zip = geoResponse.postal || "N/A";
+            let isProxy = geoResponse.security?.is_proxy ? "✅ Yes (Detected)" : "❌ No";
+            let isVPN = geoResponse.security?.is_vpn ? "✅ Yes (Detected)" : "❌ No";
+            let isTor = geoResponse.security?.is_tor ? "✅ Yes (Detected)" : "❌ No";
+
+            let mapUrl = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
 
             ipDiv.innerHTML += `
-                <p><strong>📍 Location:</strong> ${geoResponse.city || "Unknown"}, ${geoResponse.region || "Unknown"}, ${geoResponse.country || "Unknown"} (${geoResponse.country_code || "N/A"})</p>
-                <p><strong>🏢 ISP:</strong> ${geoResponse.connection?.isp || "Unknown"} (${geoResponse.connection?.org || "Unknown"})</p>
-                <p><strong>📡 ASN:</strong> ${geoResponse.connection?.asn || "Unknown"}</p>
-                <p><strong>🌍 Latitude, Longitude:</strong> <a href="${mapUrl}" target="_blank">${geoResponse.latitude || "N/A"}, ${geoResponse.longitude || "N/A"}</a></p>
-                <p><strong>⏰ Timezone:</strong> ${geoResponse.timezone?.id || "Unknown"} (UTC ${geoResponse.timezone?.utc || "Unknown"})</p>
-                <p><strong>📌 ZIP Code:</strong> ${geoResponse.postal || "N/A"}</p>
-                <p><strong>🕵️‍♂️ Proxy Detection:</strong> ${geoResponse.security?.is_proxy ? "✅ Yes (Detected)" : "❌ No"}</p>
-                <p><strong>🛡️ VPN Detection:</strong> ${geoResponse.security?.is_vpn ? "✅ Yes (Detected)" : "❌ No"}</p>
-                <p><strong>🕵️‍♂️ Tor Detection:</strong> ${geoResponse.security?.is_tor ? "✅ Yes (Detected)" : "❌ No"}</p>
+                <p><strong>📍 Location:</strong> ${city}, ${region}, ${country} (${countryCode})</p>
+                <p><strong>🏢 ISP:</strong> ${isp} (${org})</p>
+                <p><strong>📡 ASN:</strong> ${asn}</p>
+                <p><strong>🌍 Latitude, Longitude:</strong> <a href="${mapUrl}" target="_blank">${latitude}, ${longitude}</a></p>
+                <p><strong>⏰ Timezone:</strong> ${timezone} (UTC ${timezoneUTC})</p>
+                <p><strong>📌 ZIP Code:</strong> ${zip}</p>
+                <p><strong>🕵️‍♂️ Proxy Detection:</strong> ${isProxy}</p>
+                <p><strong>🛡️ VPN Detection:</strong> ${isVPN}</p>
+                <p><strong>🕵️‍♂️ Tor Detection:</strong> ${isTor}</p>
             `;
 
         } catch (error) {
