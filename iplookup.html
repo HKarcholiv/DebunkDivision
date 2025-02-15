@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debunk Division</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script defer src="iplookup.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.png" alt="Debunk Division Logo" class="logo">
+        <a href="index.html" class="tab">Home</a>
+        <a href="deleter.html" class="tab">Webhook Deleter</a>
+        <a href="scraper.html" class="tab">Web Scraper</a>
+        <a href="osint.html" class="tab">Username Search</a>
+        <a href="iplookup.html" class="tab active">IP Lookup</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="main-content">
+        <h1>IP Lookup</h1>
+        <p>Enter one or multiple **IP Addresses** (one per line) to check location, ISP, ASN, and blacklist status.</p>
+
+        <textarea id="ipInput" placeholder="Enter IP addresses (one per line)"></textarea>
+        <button id="lookupBtn">Lookup IPs</button>
+
+       
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="progressText">Waiting for lookup...</p>
+
+        <h2>Results</h2>
+        <div id="ipResults" class="result-log"></div>
+    </div>
+</body>
+</html>

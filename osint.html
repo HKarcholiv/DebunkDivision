@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debunk Division</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script defer src="osint.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.png" alt="Debunk Division Logo" class="logo">
+        <a href="index.html" class="tab">Home</a>
+        <a href="deleter.html" class="tab">Webhook Deleter</a>
+        <a href="scraper.html" class="tab">Web Scraper</a>
+        <a href="osint.html" class="tab active">Username Search</a>
+	    <a href="iplookup.html" class="tab">IP Lookup</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="main-content">
+        <h1>🔍 OSINT Username Search</h1>
+        <p>Enter multiple **usernames** (one per line) to search across various platforms.</p>
+
+        <textarea id="usernameList" placeholder="Enter usernames (one per line)"></textarea>
+
+
+        <div class="input-row">
+            <button id="searchBtn">Search Usernames</button>
+            <label class="nsfw-label">
+                <input type="checkbox" id="nsfwToggle">
+                Exclude NSFW Results
+            </label>
+        </div>
+
+   
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="progressText">Waiting for search...</p>
+
+        <h2>Results</h2>
+        <div id="osintResults" class="result-log"></div>
+    </div>
+</body>
+</html>
