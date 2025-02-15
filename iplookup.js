@@ -1,1 +1,64 @@
-const _0x312568=_0x5161;function _0x5161(_0x15e5f2,_0x12efea){const _0x5b3cf9=_0x5b3c();return _0x5161=function(_0x516107,_0x1b93a5){_0x516107=_0x516107-0xdd;let _0x309295=_0x5b3cf9[_0x516107];return _0x309295;},_0x5161(_0x15e5f2,_0x12efea);}(function(_0x1822f7,_0x1eced3){const _0x55885c=_0x5161,_0x45dbe8=_0x1822f7();while(!![]){try{const _0x22a8ff=-parseInt(_0x55885c(0x101))/0x1*(parseInt(_0x55885c(0x100))/0x2)+parseInt(_0x55885c(0xe9))/0x3+parseInt(_0x55885c(0xfb))/0x4+parseInt(_0x55885c(0x11f))/0x5*(-parseInt(_0x55885c(0x104))/0x6)+-parseInt(_0x55885c(0xdf))/0x7+-parseInt(_0x55885c(0x124))/0x8+parseInt(_0x55885c(0xf6))/0x9;if(_0x22a8ff===_0x1eced3)break;else _0x45dbe8['push'](_0x45dbe8['shift']());}catch(_0x15ebb8){_0x45dbe8['push'](_0x45dbe8['shift']());}}}(_0x5b3c,0xde68b),document[_0x312568(0x117)]('lookupBtn')[_0x312568(0xff)](_0x312568(0x11a),async function(){const _0x4d2112=_0x312568;let _0x15dbb3=document['getElementById'](_0x4d2112(0xe8))[_0x4d2112(0xe7)][_0x4d2112(0x121)](),_0x227f52=document['getElementById'](_0x4d2112(0xfa)),_0xefebac=document[_0x4d2112(0x117)](_0x4d2112(0x10a)),_0x38902e=document[_0x4d2112(0x117)](_0x4d2112(0x106));_0x227f52[_0x4d2112(0x113)]='',_0xefebac[_0x4d2112(0xf8)][_0x4d2112(0x118)]='0%',_0x38902e[_0x4d2112(0xf3)]=_0x4d2112(0x122);if(!_0x15dbb3){_0x227f52['innerHTML']=_0x4d2112(0xe1);return;}let _0x4a1c17=_0x15dbb3[_0x4d2112(0x10c)]('\x0a')[_0x4d2112(0xe6)](_0x1d73af=>_0x1d73af[_0x4d2112(0x121)]())['filter'](_0x2469c5=>_0x2469c5[_0x4d2112(0x107)](/^(\d{1,3}\.){3}\d{1,3}$|^[a-fA-F0-9:]+$/)),_0x567753=_0x4a1c17[_0x4d2112(0x11b)],_0x2d8416=0x0,_0xba121d=_0x4a1c17[_0x4d2112(0xe6)](async _0x44afc3=>{const _0x4935aa=_0x4d2112;let _0xaac85c=document['createElement'](_0x4935aa(0xfd));_0xaac85c[_0x4935aa(0x119)][_0x4935aa(0x10b)](_0x4935aa(0xe2)),_0xaac85c[_0x4935aa(0x113)]=_0x4935aa(0x123)+_0x44afc3+'</h3>',_0x227f52[_0x4935aa(0x116)](_0xaac85c);try{let _0x5979c5=await fetch(_0x4935aa(0xeb)+_0x44afc3),_0x318bd8=await _0x5979c5[_0x4935aa(0x120)]();if(!_0x318bd8[_0x4935aa(0x11d)]){console['error'](_0x4935aa(0xde)+_0x44afc3+':',_0x318bd8),_0xaac85c[_0x4935aa(0x113)]+=_0x4935aa(0xe0)+(_0x318bd8[_0x4935aa(0x11e)]||'Unknown\x20API\x20Error')+_0x4935aa(0xec);return;}let _0x1803a4=_0x4935aa(0xf1)+_0x318bd8['latitude']+','+_0x318bd8[_0x4935aa(0x115)];_0xaac85c[_0x4935aa(0x113)]+=_0x4935aa(0x10e)+_0x318bd8[_0x4935aa(0x10d)]+',\x20'+_0x318bd8[_0x4935aa(0xf7)]+',\x20'+_0x318bd8[_0x4935aa(0xe3)]+'\x20('+_0x318bd8[_0x4935aa(0x112)]+_0x4935aa(0xdd)+_0x318bd8[_0x4935aa(0x108)][_0x4935aa(0x10f)]+'\x20('+_0x318bd8[_0x4935aa(0x108)][_0x4935aa(0xe4)]+_0x4935aa(0xee)+_0x318bd8[_0x4935aa(0x108)][_0x4935aa(0xe5)]+_0x4935aa(0x103)+_0x1803a4+_0x4935aa(0xfc)+_0x318bd8[_0x4935aa(0xf9)]+',\x20'+_0x318bd8['longitude']+_0x4935aa(0x111)+_0x318bd8[_0x4935aa(0xf5)]['id']+_0x4935aa(0x109)+_0x318bd8[_0x4935aa(0xf5)][_0x4935aa(0xf2)]+')</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>📌\x20ZIP\x20Code:</strong>\x20'+(_0x318bd8[_0x4935aa(0x11c)]?_0x318bd8[_0x4935aa(0x11c)]:_0x4935aa(0xf0))+_0x4935aa(0xef)+(_0x318bd8[_0x4935aa(0x105)][_0x4935aa(0xed)]?_0x4935aa(0x110):'❌\x20No')+_0x4935aa(0xea)+(_0x318bd8['security']['is_vpn']?'✅\x20Yes\x20(Detected)':_0x4935aa(0xfe))+_0x4935aa(0x114)+(_0x318bd8['security']['is_tor']?_0x4935aa(0x110):_0x4935aa(0xfe))+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';}catch(_0x1bf9a2){console['error']('❌\x20Error\x20fetching\x20data\x20for\x20'+_0x44afc3+':',_0x1bf9a2),_0xaac85c[_0x4935aa(0x113)]+=_0x4935aa(0x102);}_0x2d8416++;let _0x432440=Math['round'](_0x2d8416/_0x567753*0x64);_0xefebac[_0x4935aa(0xf8)][_0x4935aa(0x118)]=_0x432440+'%',_0x38902e['innerText']='Searching...\x20('+_0x2d8416+'/'+_0x567753+_0x4935aa(0xf4);});await Promise['all'](_0xba121d),_0x38902e[_0x4d2112(0xf3)]='✅\x20Lookup\x20Complete!';}));function _0x5b3c(){const _0x10fe06=['1492102OKHdnC','1pxuZmA','<p>❌\x20API\x20Request\x20Failed!\x20Check\x20console.</p>','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>🌍\x20Latitude,\x20Longitude:</strong>\x20<a\x20href=\x22','14874UPJmOR','security','progressText','match','connection','\x20(UTC\x20','progressBar','add','split','city','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>📍\x20Location:</strong>\x20','isp','✅\x20Yes\x20(Detected)','</a></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>⏰\x20Timezone:</strong>\x20','country_code','innerHTML','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>🕵️‍♂️\x20Tor\x20Detection:</strong>\x20','longitude','appendChild','getElementById','width','classList','click','length','postal','success','message','155UTvEZH','json','trim','Starting\x20lookup...','<h3>🔍\x20Checking:\x20','10838744AhPYLe',')</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>🏢\x20ISP:</strong>\x20','❌\x20Error\x20for\x20','4714857iRBqpx','<p>❌\x20Error:\x20','<p>❌\x20No\x20IP\x20addresses\x20entered!</p>','ip-result','country','org','asn','map','value','ipInput','3439116Uuvdmj','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>🛡️\x20VPN\x20Detection:</strong>\x20','https://ipwho.is/','</p>','is_proxy',')</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>📡\x20ASN:</strong>\x20','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>🕵️‍♂️\x20Proxy\x20Detection:</strong>\x20','N/A','https://www.google.com/maps/search/?api=1&query=','utc','innerText','\x20completed)','timezone','19144935RrEFYg','region','style','latitude','ipResults','1954776iQVogm','\x22\x20target=\x22_blank\x22>','div','❌\x20No','addEventListener'];_0x5b3c=function(){return _0x10fe06;};return _0x5b3c();}
+document.getElementById("lookupBtn").addEventListener("click", async function () {
+    let input = document.getElementById("ipInput").value.trim();
+    let resultsDiv = document.getElementById("ipResults");
+    let progressBar = document.getElementById("progressBar");
+    let progressText = document.getElementById("progressText");
+
+    resultsDiv.innerHTML = "";
+    progressBar.style.width = "0%";
+    progressText.innerText = "Starting lookup...";
+
+    if (!input) {
+        resultsDiv.innerHTML = "<p>❌ No IP addresses entered!</p>";
+        return;
+    }
+
+    let ips = input.split("\n").map(ip => ip.trim()).filter(ip => ip.match(/^(\d{1,3}\.){3}\d{1,3}$|^[a-fA-F0-9:]+$/));
+
+    let totalChecks = ips.length;
+    let completedChecks = 0;
+
+    let ipPromises = ips.map(async ip => {
+        let ipDiv = document.createElement("div");
+        ipDiv.classList.add("ip-result");
+        ipDiv.innerHTML = `<h3>🔍 Checking: ${ip}</h3>`;
+        resultsDiv.appendChild(ipDiv);
+
+        try {
+            let response = await fetch(`https://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,mobile,proxy,hosting`);
+            let geoResponse = await response.json();
+
+            if (!geoResponse || geoResponse.status === "fail") {
+                console.error(`❌ IP-API Error for ${ip}:`, geoResponse);
+                ipDiv.innerHTML += `<p>❌ Error: ${geoResponse.message || "Unknown API Error"}</p>`;
+                return;
+            }
+
+            let mapUrl = `https://www.google.com/maps/search/?api=1&query=${geoResponse.lat},${geoResponse.lon}`;
+
+            ipDiv.innerHTML += `
+                <p><strong>📍 Location:</strong> ${geoResponse.city}, ${geoResponse.regionName}, ${geoResponse.country} (${geoResponse.countryCode})</p>
+                <p><strong>🏢 ISP:</strong> ${geoResponse.isp} (${geoResponse.org})</p>
+                <p><strong>📡 ASN:</strong> ${geoResponse.as}</p>
+                <p><strong>🌍 Latitude, Longitude:</strong> <a href="${mapUrl}" target="_blank">${geoResponse.lat}, ${geoResponse.lon}</a></p>
+                <p><strong>⏰ Timezone:</strong> ${geoResponse.timezone}</p>
+                <p><strong>📌 ZIP Code:</strong> ${geoResponse.zip ? geoResponse.zip : "N/A"}</p>
+                <p><strong>📱 Mobile Network:</strong> ${geoResponse.mobile ? "✅ Yes" : "❌ No"}</p>
+                <p><strong>🛡️ Hosting Provider:</strong> ${geoResponse.hosting ? "✅ Yes" : "❌ No"}</p>
+                <p><strong>🕵️‍♂️ Proxy Detection:</strong> ${geoResponse.proxy ? "✅ Yes (Detected)" : "❌ No"}</p>
+            `;
+
+        } catch (error) {
+            console.error(`❌ Error fetching data for ${ip}:`, error);
+            ipDiv.innerHTML += "<p>❌ API Request Failed! Check console.</p>";
+        }
+
+        completedChecks++;
+        let progressPercent = Math.round((completedChecks / totalChecks) * 100);
+        progressBar.style.width = `${progressPercent}%`;
+        progressText.innerText = `Searching... (${completedChecks}/${totalChecks} completed)`;
+    });
+
+    await Promise.all(ipPromises);
+    progressText.innerText = "✅ Lookup Complete!";
+});
