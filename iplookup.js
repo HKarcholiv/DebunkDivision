@@ -25,27 +25,31 @@ document.getElementById("lookupBtn").addEventListener("click", async function ()
         resultsDiv.appendChild(ipDiv);
 
         try {
-            let response = await fetch(`https://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,mobile,proxy,hosting`);
+            console.log(`🔍 Fetching data for: ${ip}`);
+
+            let response = await fetch(`https://ipwho.is/${ip}`);
             let geoResponse = await response.json();
 
-            if (!geoResponse || geoResponse.status === "fail") {
-                console.error(`❌ IP-API Error for ${ip}:`, geoResponse);
+            console.log("🌍 API Response:", geoResponse); // Debugging step
+
+            if (!geoResponse.success) {
+                console.error(`❌ API Error for ${ip}:`, geoResponse);
                 ipDiv.innerHTML += `<p>❌ Error: ${geoResponse.message || "Unknown API Error"}</p>`;
                 return;
             }
 
-            let mapUrl = `https://www.google.com/maps/search/?api=1&query=${geoResponse.lat},${geoResponse.lon}`;
+            let mapUrl = `https://www.google.com/maps/search/?api=1&query=${geoResponse.latitude},${geoResponse.longitude}`;
 
             ipDiv.innerHTML += `
-                <p><strong>📍 Location:</strong> ${geoResponse.city}, ${geoResponse.regionName}, ${geoResponse.country} (${geoResponse.countryCode})</p>
-                <p><strong>🏢 ISP:</strong> ${geoResponse.isp} (${geoResponse.org})</p>
-                <p><strong>📡 ASN:</strong> ${geoResponse.as}</p>
-                <p><strong>🌍 Latitude, Longitude:</strong> <a href="${mapUrl}" target="_blank">${geoResponse.lat}, ${geoResponse.lon}</a></p>
-                <p><strong>⏰ Timezone:</strong> ${geoResponse.timezone}</p>
-                <p><strong>📌 ZIP Code:</strong> ${geoResponse.zip ? geoResponse.zip : "N/A"}</p>
-                <p><strong>📱 Mobile Network:</strong> ${geoResponse.mobile ? "✅ Yes" : "❌ No"}</p>
-                <p><strong>🛡️ Hosting Provider:</strong> ${geoResponse.hosting ? "✅ Yes" : "❌ No"}</p>
-                <p><strong>🕵️‍♂️ Proxy Detection:</strong> ${geoResponse.proxy ? "✅ Yes (Detected)" : "❌ No"}</p>
+                <p><strong>📍 Location:</strong> ${geoResponse.city || "Unknown"}, ${geoResponse.region || "Unknown"}, ${geoResponse.country || "Unknown"} (${geoResponse.country_code || "N/A"})</p>
+                <p><strong>🏢 ISP:</strong> ${geoResponse.connection?.isp || "Unknown"} (${geoResponse.connection?.org || "Unknown"})</p>
+                <p><strong>📡 ASN:</strong> ${geoResponse.connection?.asn || "Unknown"}</p>
+                <p><strong>🌍 Latitude, Longitude:</strong> <a href="${mapUrl}" target="_blank">${geoResponse.latitude || "N/A"}, ${geoResponse.longitude || "N/A"}</a></p>
+                <p><strong>⏰ Timezone:</strong> ${geoResponse.timezone?.id || "Unknown"} (UTC ${geoResponse.timezone?.utc || "Unknown"})</p>
+                <p><strong>📌 ZIP Code:</strong> ${geoResponse.postal || "N/A"}</p>
+                <p><strong>🕵️‍♂️ Proxy Detection:</strong> ${geoResponse.security?.is_proxy ? "✅ Yes (Detected)" : "❌ No"}</p>
+                <p><strong>🛡️ VPN Detection:</strong> ${geoResponse.security?.is_vpn ? "✅ Yes (Detected)" : "❌ No"}</p>
+                <p><strong>🕵️‍♂️ Tor Detection:</strong> ${geoResponse.security?.is_tor ? "✅ Yes (Detected)" : "❌ No"}</p>
             `;
 
         } catch (error) {
