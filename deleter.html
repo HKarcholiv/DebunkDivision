@@ -14,20 +14,25 @@
         <a href="index.html" class="tab">Home</a>
         <a href="deleter.html" class="tab active">Webhook Deleter</a>
         <a href="scraper.html" class="tab">Web Scraper</a>
-		<a href="osint.html" class="tab">Username Search</a>
+        <a href="osint.html" class="tab">Username Search</a>
         <a href="iplookup.html" class="tab">IP Lookup</a>
         <a href="#">About</a>
     </div>
+
     <div class="content">
-        <h1>Webhook Bulk Deleter</h1>
-        <p>Enter multiple webhooks (one per line) and click delete.</p>
-        
+        <h1>Webhook Bulk Spammer & Deleter</h1>
+        <p>Enter multiple webhooks (one per line) and choose an action.</p>
+
         <textarea id="webhookList" placeholder="Enter Discord Webhooks (one per line)"></textarea>
+        
+        <input type="text" id="spamMessage" placeholder="Enter Spam Message">
+        <input type="number" id="spamCount" placeholder="Spam Count" min="1" value="5">
+        
+        <button id="spamBtn">Spam Webhooks</button>
         <button id="deleteBtn">Delete Webhooks</button>
         
         <h2>Results</h2>
         <div id="results" class="result-log"></div>
-
     </div>
 </body>
 </html>
